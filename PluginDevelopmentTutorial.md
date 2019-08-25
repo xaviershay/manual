@@ -65,13 +65,15 @@ Added MyModule to plugin.json
 Panel found at res/MyModule.svg. Generating source file.
 Found 1 params, 1 inputs, 1 outputs, 0 lights, and 0 custom widgets.
 Components extracted from res/MyModule.svgSource file generated at src/MyModule.cpp
-
-To enable the module, add
-extern Model *modelMyModule;
-to plugin.hpp, and add
-p->addModel(modelMyModule);
-to the init() function in plugin.cpp.
 ```
+
+To enable the module, add the following lines:
+
+```
+extern Model *modelMyModule; // plugin.hpp
+p->addModel(modelMyModule); // init() function in plugin.cpp
+```
+
 Open `MyModule.svg` with Inkscape, open the Layers panel, and hide the `components` layer to hide component placeholders.
 
 ## Implementing the DSP kernel
